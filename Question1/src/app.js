@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 
 // Express
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
@@ -20,7 +20,7 @@ import userRoutes from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 
 // routes decclaration
-app.use("/api/v1/users", userRoutes);
-app.use("/api/v1/post", postRoutes);
+app.use("/", userRoutes);
+app.use("/", postRoutes);
 
 export default app;
