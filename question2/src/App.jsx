@@ -3,6 +3,10 @@ import TopUsers from "./components/TopUsers";
 import PopularPosts from "./components/PopularPosts";
 import LatestPosts from "./components/LatestPosts";
 import "./App.css";
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 
 function App() {
   return (

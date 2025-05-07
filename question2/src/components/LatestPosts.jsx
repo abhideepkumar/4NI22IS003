@@ -9,7 +9,7 @@ function LatestPosts() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/posts?type=latest');
+        const response = await axios.get(`${process.env.BACKEND_URL}/posts?type=latest`);
         setPosts(response.data.posts);
         setLoading(false);
       } catch (err) {

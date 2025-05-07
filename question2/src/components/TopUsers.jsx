@@ -9,7 +9,7 @@ function TopUsers() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/users');
+        const response = await axios.get(`${process.env.BACKEND_URL}/users`);
         setUsers(response.data.topUsers);
         setLoading(false);
       } catch (err) {
